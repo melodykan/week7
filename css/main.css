@@ -3,35 +3,79 @@ img {
   max-height: 100%;
 }
 
-.col-6 {
+.col-6-pic {
   padding:10px;
   box-sizing: border-box;
   width: 90%;
-  height: auto;
+  height: auto; 
 }
 
+.center {
+  margin: 0 auto;
+}
 
-@media screen and (min-width: 700px) {
+.column {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
 	
-	.col-6 {
+	.col-6-pic {
 		float: left;
-	  width: 40%;
-	}
+    width: 35%;
+    padding: 5px 5px;
+  }
+  
+  .col-6-text {
+    float: left;
+    width: 35%;
+    margin: 5px;
+  }
+
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
 	
 }
 
-@media screen and (min-width: 1000px) {
+@media (min-width: 1140px) {
 	
-	.col-4 {
+	.col-4-pic {
 		float: left;
-	  width: 33.3%;
-	}
+    width: 33%;
+    padding: 5px 5px;
+  }
+  
+  .col-4-text {
+    float: left;
+    width: 30%;
+    margin: 10px;
+  }
+
+  .column {
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  }
 	
 }
 
-#gallery-block img {
-  width:30%;
-  height: auto;
+.row-photo {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
 }
 
 .bg-image {
@@ -39,6 +83,8 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .bg-image.bg-image-gradient:before {
